@@ -6,7 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./posts-list.component.css']
 })
 export class PostsListComponent {
-  
+
   @Input()
   posts: any[];
 

@@ -12,6 +12,7 @@ import { PostTitleComponent } from './post-title/post-title.component';
 import { PostDateComponent } from './post-date/post-date.component';
 import { ExcerptPipe } from './excerpt.pipe';
 import { SearchbarComponent } from './searchbar/searchbar.component';
+import { TwitterShareComponent } from './twitter-share/twitter-share.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { SearchbarComponent } from './searchbar/searchbar.component';
     PostTitleComponent,
     PostDateComponent,
     ExcerptPipe,
-    SearchbarComponent
+    SearchbarComponent,
+    TwitterShareComponent
   ],
   imports: [
     BrowserModule,

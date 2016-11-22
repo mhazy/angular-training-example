@@ -6,6 +6,12 @@
   [date]="date">
 </app-post-date>
 
-<pre class="ws-normal">
+<pre *ngIf="excerpt" class="ws-normal">
 {{ body | excerpt:25 }}
 </pre>
+
+<pre *ngIf="!excerpt" class="ws-normal">
+{{ body }}
+</pre>
+
+<app-twitter-share [content]="body"></app-twitter-share>

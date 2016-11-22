@@ -9,7 +9,7 @@ import { PostsService } from '../posts.service';
 export class PostsContainerComponent implements OnInit {
   private postsService: PostsService;
   private posts: any[];
-  private query: string = 'one';
+  private query: string = '';
 
   constructor(postsService: PostsService) {
     this.postsService = postsService;
