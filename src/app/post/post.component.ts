@@ -10,4 +10,13 @@ export class PostComponent {
   @Input()
   title: string = 'Post Title Default';
 
+  @Input()
+  date: Date;
+
+  @Input()
+  body: string;
+
+  @Input()
+  excerpt: boolean;
+
 }
