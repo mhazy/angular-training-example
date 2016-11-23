@@ -1,6 +1,6 @@
 <main class="mw7 center">
   <ul class="list pl0">
-    <li *ngFor="let post of posts">
+    <li *ngFor="let post of posts; trackBy: trackByFn;">
       <app-post
         [title]="post.title"
         [date]="post.date"

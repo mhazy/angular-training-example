@@ -8,6 +8,7 @@ import { PostComponent } from './post/post.component';
 import { PostsListComponent } from './posts-list/posts-list.component';
 import { PostsContainerComponent } from './posts-container/posts-container.component';
 import { PostsService } from './posts.service';
+import { JsonApiService } from './json-api.service';
 import { PostTitleComponent } from './post-title/post-title.component';
 import { PostDateComponent } from './post-date/post-date.component';
 import { ExcerptPipe } from './excerpt.pipe';
@@ -32,7 +33,8 @@ import { TwitterShareComponent } from './twitter-share/twitter-share.component';
     HttpModule
   ],
   providers: [
-    PostsService
+    PostsService,
+    JsonApiService
   ],
   bootstrap: [AppComponent]
 })

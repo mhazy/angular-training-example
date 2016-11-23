@@ -16,20 +16,21 @@ export class PostsContainerComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.posts = this.getPosts();
+    this.getPosts();
   }
 
   getPosts() {
-    if (this.query === '') {
-      return this.postsService.getPosts();
-    } else {
-      return this.postsService.getFilteredPosts(this.query);
-    }
+    this.postsService.getPosts().subscribe((posts) => {
+      this.posts = posts;
+    });
   }
 
   updateQuery(query: string) {
     this.query = query;
-    this.posts = this.getPosts();
+    this.postsService.getFilteredPosts(this.query)
+      .subscribe((posts) => {
+        this.posts = posts;
+      })
   }
 
 }
