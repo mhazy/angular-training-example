@@ -9,9 +9,4 @@ export class PostsListComponent {
 
   @Input()
   posts: any[];
-
-  trackByFn(index, post: any) {
-    return post.id;
-  }
-
 }

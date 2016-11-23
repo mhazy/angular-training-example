@@ -11,6 +11,10 @@ export class PostsService {
     return this.jsonApiService.get('posts');
   }
 
+  getPost(id: any) {
+    return this.jsonApiService.get('posts/' + id);
+  }
+
   getFilteredPosts(query: string) {
     return this.jsonApiService.get('posts')
       .map((posts) => {

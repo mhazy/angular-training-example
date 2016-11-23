@@ -1,0 +1,11 @@
+<a [routerLink]="['/posts']">Back to Posts</a>
+
+<app-post
+  [title]="post.title"
+  [date]="post.date"
+  [body]="post.body"
+  [excerpt]="false"
+></app-post>
+
+<button (click)="onReturnButtonClicked()">Return to Posts</button>
+<a [routerLink]="['/posts']">Back to Posts</a>

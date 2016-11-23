@@ -14,6 +14,30 @@ import { PostDateComponent } from './post-date/post-date.component';
 import { ExcerptPipe } from './excerpt.pipe';
 import { SearchbarComponent } from './searchbar/searchbar.component';
 import { TwitterShareComponent } from './twitter-share/twitter-share.component';
+import { RouterModule, Routes } from '@angular/router';
+import { HomeContainerComponent } from './home-container/home-container.component';
+import { PostContainerComponent } from './post-container/post-container.component';
+
+const APP_ROUTING: Routes = [
+  // Home Page
+  {
+    path: '',
+    component: HomeContainerComponent
+  },
+ 
+  // Posts Page
+  {
+    path: 'posts',
+    component: PostsContainerComponent
+  },
+
+  // Post Page
+  {
+    path: 'posts/:id',
+    component: PostContainerComponent
+  }
+];
+
 
 @NgModule({
   declarations: [
@@ -25,12 +49,15 @@ import { TwitterShareComponent } from './twitter-share/twitter-share.component';
     PostDateComponent,
     ExcerptPipe,
     SearchbarComponent,
-    TwitterShareComponent
+    TwitterShareComponent,
+    HomeContainerComponent,
+    PostContainerComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot(APP_ROUTING)
   ],
   providers: [
     PostsService,

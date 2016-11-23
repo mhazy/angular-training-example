@@ -1,12 +1,13 @@
 <main class="mw7 center">
   <ul class="list pl0">
-    <li *ngFor="let post of posts; trackBy: trackByFn;">
+    <li *ngFor="let post of posts;">
       <app-post
         [title]="post.title"
         [date]="post.date"
         [body]="post.body"
         [excerpt]="true"
       ></app-post>
+      <a [routerLink]="['/posts', post.id]">View Post</a>
     </li>
   </ul>
 </main>
